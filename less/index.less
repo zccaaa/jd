@@ -1,0 +1,331 @@
+// 在主页的index.less中去引入公共base.less 一般引包放在前面引入
+@import 'base.less';
+// base改了主页也要保存 手动保存一下
+
+/* 头部容器 */
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    // 定位了会脱标没有默认100%的宽度需要手动设置一个宽度
+    width: 100%;
+    display: flex;
+    // background-color: #ccc;
+    z-index: 999;
+
+    // 左边
+    .left {
+        width: 0.8rem;
+        height: 0.4rem;
+        /* 利用伸缩布局给left设置让他里面的子元素弹性布局居中 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-logo {
+            /* display: block; */
+            width: 0.6rem;
+            height: 0.23rem;
+            /* 使用背景图也要缩小1半  */
+            // background-image: url(../images/sprites.png);
+            /* 默认400*400  把整个原图缩小*/
+            // background-size: 2rem 2rem;
+            /* 背景图定位要缩小1半 220/2 110px */
+            // background-position: 0 -1.1rem;
+            background: ~"url(../images/sprites.png) -0px -1.1rem / 2rem 2rem ";
+        }
+    }
+
+    // 中间
+    .center {
+        flex: 1;
+
+        form {
+            padding: 0.05rem 0;
+            position: relative;
+
+            .icon-search {
+                position: absolute;
+                top: 0.1rem;
+                left: 0.05rem;
+                width: 0.2rem;
+                height: 0.2rem;
+                /* 使用背景图也要缩小1半  */
+                // background-image: url(../images/sprites.png);
+                /* 默认400*400  把整个原图缩小*/
+                // background-size: 2rem 2rem;
+                /* 背景图定位要缩小1半 水平116/2 58px  220/2 110px */
+                // background-position: -0.58rem -1.1rem;
+                /* 把代码包在一个字符串里面 前面跟一个~波浪号 把字符串编译了之后去掉 */
+                background: ~"url(../images/sprites.png) -0.58rem -1.1rem / 2rem 2rem ";
+            }
+
+            input {
+                width: 100%;
+                height: 0.3rem;
+                border-radius: 0.15rem;
+                padding-left: 0.3rem;
+                // 因为自己默认13px大小覆盖body 单独设置一下
+                font-size: .14rem;
+            }
+        }
+    }
+
+    // 右边
+    .right {
+        width: 0.5rem;
+        height: 0.4rem;
+
+        a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            line-height: 0.4rem;
+            text-decoration: none;
+        }
+    }
+}
+
+/* 轮播图区域 */
+#slide {
+
+    // 因为图片全屏宽度 不需要计算（但是100%也是2倍图）
+    img {
+        width: 100%;
+    }
+
+    /* 如果需要修改轮播图样式例如小圆点样式 手动检查元素找到对应的类名 覆盖 */
+    .swiper-pagination-bullet-active {
+        background-color: #fff;
+    }
+}
+
+/* 导航区域的样式 */
+#nav {
+    padding: 0.1rem 0;
+
+    ul {
+        /* 让li在一行显示 */
+        display: flex;
+        // 多行添加flex换行
+        flex-wrap: wrap;
+
+        li {
+            width: 25%;
+
+            // flex: 1;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // 垂直排列
+                flex-direction: column;
+
+                img {
+                    width: 0.4rem;
+                }
+
+                p {
+                    margin: 0.05rem 0;
+                }
+            }
+        }
+    }
+}
+
+/* 主体商品区域的样式 */
+#main {
+    background-color: #eee;
+    padding: 0.1rem;
+    // padding-bottom: 0.6rem;
+    margin-bottom: 0.5rem;
+
+    // 秒杀商品
+    .seckill {
+        background-color: #fff;
+
+        // 秒杀标题
+        .title {
+            display: flex;
+            // 给父元素设置主轴2端对齐
+            justify-content: space-between;
+            height: 0.4rem;
+            align-items: center;
+
+            .left {
+                // 左边也flex让里面内容水平排列
+                display: flex;
+
+                img {
+                    width: 0.2rem;
+                    height: 0.25rem;
+                    margin-left: 0.05rem;
+                }
+
+                // 子代 只选中左边的儿子span
+                >span {
+                    margin-left: 0.05rem;
+                    color: @main-color;
+                }
+
+                .downtime {
+                    margin-left: 0.05rem;
+
+                    span {
+                        width: 0.15rem;
+                        height: 0.15rem;
+                        display: inline-block;
+                        text-align: center;
+                        line-height: 0.15rem;
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .right {}
+        }
+
+        // 秒杀内容
+        .content {
+            ul {
+                display: flex;
+
+                li {
+                    // flex:1 不是写了flex；1 一定平分3列 还会参照子元素 如果子元素太大了撑开父元素
+                    flex: 1;
+
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            // 固定图片宽度 缩小2倍
+                            width: 1.1rem;
+                        }
+
+                        span {
+                            color: @main-color;
+                            font-size: 0.12rem;
+                        }
+
+                        del {
+                            font-size: 0.12rem;
+                            color: #ccc;
+                        }
+                    }
+
+                    // &:nth-child(2){
+                    //     border-left: 0.01rem solid #ccc;
+                    //     border-right: 0.01rem solid #ccc;
+                    // }
+                    // &:nth-child(-n+2){
+                    //     border-right: 0.01rem solid #ccc;
+                    // }
+                    // &:nth-last-child(n+2){
+                    //     border-right: 0.01rem solid #ccc;
+                    // }
+                    // &:nth-child(n+2){
+                    //     border-left: 0.01rem solid #ccc;
+                    // }
+                    // &:nth-last-child(-n+2){
+                    //     border-left: 0.01rem solid #ccc;
+                    // }
+                    // 选中相邻后面的所有兄弟排除了自己
+                    &~li {
+                        border-left: 0.01rem solid #ccc;
+                    }
+                }
+            }
+        }
+    }
+
+    // 京东超市
+    .market {
+        background-color: #fff;
+        margin-top: 0.1rem;
+
+        .title {
+            border-bottom: 0.01rem solid #ccc;
+
+            h4 {
+                padding-left: 0.3rem;
+                line-height: 0.4rem;
+                font-weight: normal;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: 0.04rem;
+                    height: 0.16rem;
+                    position: absolute;
+                    background-color: @main-color;
+                    left: 0.2rem;
+                    top: 0.12rem;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+
+            .left {
+                flex: 1;
+
+                a {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right {
+                flex: 1;
+
+                a {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+/* 底部区域的样式 */
+
+#footer {
+    // 固定定位到底部
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    // 一定要设置宽度
+    width: 100%;
+    background-color: #fff;
+
+    ul {
+        display: flex;
+
+        li {
+            flex: 1;
+
+            a {
+                display: block;
+                text-align: center;
+
+                img {
+                    width: 0.65rem;
+                    height: 0.5rem;
+                }
+
+            }
+        }
+    }
+}

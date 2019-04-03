@@ -1,0 +1,212 @@
+// 引入公共样式
+@import 'base.less';
+
+
+// 1. 实现上中下布局给 header main  footer父容器body设置伸缩布局而且 Y轴排列
+body {
+    display: flex;
+    flex-direction: column;
+    // body和页面一样高才能自适应
+    height: 100vh;
+}
+
+// 头部区域样式
+#header {
+    height: .4rem;
+    background-color: #ccc;
+    display: flex;
+
+    .left {
+        width: 0.4rem;
+        height: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-back {
+            width: 0.2rem;
+            height: 0.2rem;
+            background-image: url(../images/sprites.png);
+            background-size: 2rem 2rem;
+            background-position: -0.2rem 0;
+        }
+    }
+
+    .center {
+        flex: 1;
+
+        form {
+            padding-top: 0.05rem;
+            position: relative;
+
+            .icon-search {
+                position: absolute;
+                top: 0.1rem;
+                left: 0.1rem;
+                width: 0.2rem;
+                height: 0.2rem;
+                background-image: url(../images/sprites.png);
+                background-size: 2rem 2rem;
+                background-position: -0.6rem -1.1rem;
+            }
+
+            input {
+                width: 100%;
+                height: 0.3rem;
+                border-radius: 0.15rem;
+                padding-left: 0.3rem;
+                font-size: 0.14rem;
+            }
+        }
+    }
+
+    .right {
+        width: 0.4rem;
+        height: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-menu {
+            width: 0.2rem;
+            height: 0.2rem;
+            background-image: url(../images/sprites.png);
+            background-size: 2rem 2rem;
+            background-position: -0.6rem 0;
+        }
+    }
+}
+
+#main {
+    flex: 1;
+    display: flex;
+
+    // 分类左侧样式
+    .category-left {
+        width: .85rem;
+        // 由于页面不能出现滚动条(做滑动 给父元素设置overflow: hidden 隐藏溢出)
+        overflow: hidden;
+
+        // 保证最外面的 swiper-container高度和 左侧分类category-left一样
+        .swiper-container {
+            height: 100%;
+
+            // 真正滑动的swiper-slide容器高度不能和 父容器要由内容撑开
+            .swiper-slide {
+                // auto就是由内容撑开 本来默认盒子就是auto但是swiper默认设置100% 需要覆盖他
+                height: auto;
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    display: block;
+                    width: 100%;
+                    height: .46rem;
+                    background-color: #eee;
+                    text-align: center;
+                    line-height: .46rem;
+                }
+
+                // 当li被选中改变a的颜色
+                &.active {
+                    a {
+                        background-color: #fff;
+                        color: @main-color;
+                    }
+                }
+            }           
+        }
+    }
+
+    // 分类右侧样式
+    .category-right {
+        flex: 1;
+        overflow: hidden;
+        padding: .07rem;
+
+        // 保证最外面的 swiper-container高度和 左侧分类category-left一样
+        .swiper-container {
+            height: 100%;
+
+            // 真正滑动的swiper-slide容器高度不能和 父容器要由内容撑开
+            .swiper-slide {
+                // auto就是由内容撑开 本来默认盒子就是auto但是swiper默认设置100% 需要覆盖他
+                height: auto;
+            }
+            .swiper-scrollbar{
+                width: .03rem;
+                background-color: rgba(255,0,0,0.1);
+                .swiper-scrollbar-drag{
+                    background-color: rgba(255,0,0,0.5); 
+                }
+            }
+        }
+
+        .banner {
+            img {
+                width: 100%;
+            }
+        }
+
+        #branchList {
+
+            // 每个品牌
+            .jd-brand {
+
+                // 品牌标题
+                h4 {
+                    line-height: .4rem;
+                }
+
+                // 品牌图标列表
+                ul {
+                    display: flex;
+                    // 父元素设置换行
+                    flex-wrap: wrap;
+
+                    li {
+                        width: 33.33%;
+
+                        a {
+                            display: flex;
+                            // 垂直排列图片和文字
+                            flex-direction: column;
+                            // 设置图片和文字居中
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                width: .7rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 分类底部
+#footer {
+    height: 0.5rem;
+    background-color: #ccc;
+
+    ul {
+        display: flex;
+
+        li {
+            flex: 1;
+
+            a {
+                display: block;
+                text-align: center;
+
+                img {
+                    width: .65rem;
+                }
+            }
+        }
+    }
+}

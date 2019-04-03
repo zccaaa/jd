@@ -1,0 +1,67 @@
+/* 头部容器 */
+#header {
+    display: flex;
+    background-color: #ccc;
+}
+
+/* 设计稿也是2倍图 但是CSS像素参照是视口 在设计稿2倍图基础上全部/2 */
+#header .left {
+    width: 80px;
+    height: 40px;
+    /* 利用伸缩布局给left设置让他里面的子元素弹性布局居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .left .icon-logo{
+    /* display: block; */
+    width: 60px;
+    height: 23px;
+    /* 使用背景图也要缩小1半  */
+    background-image: url(../images/sprites.png);
+    /* 默认400*400  把整个原图缩小*/
+    background-size: 200px 200px;
+    /* 背景图定位要缩小1半 220/2 110px */
+    background-position: 0 -110px;
+}
+
+#header .center {
+    flex: 1;
+}
+#header .center form{
+    padding: 5px 0;
+    position: relative;
+}
+#header .center form .icon-search{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    /* 使用背景图也要缩小1半  */
+    background-image: url(../images/sprites.png);
+    /* 默认400*400  把整个原图缩小*/
+    background-size: 200px 200px;
+    /* 背景图定位要缩小1半 水平116/2 58px  220/2 110px */
+    background-position: -58px -110px;
+    
+}
+#header .center form input{
+    width: 100%;
+    height: 30px;
+    border-radius:15px;
+    padding-left: 30px;
+}
+
+#header .right {
+    width: 50px;
+    height: 40px;
+}
+#header .right a{
+    display: block;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+}

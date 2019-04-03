@@ -1,0 +1,80 @@
+// 把jd主题色定义到公共base.less里面的变量 所有页面都可以使用这个变量
+@main-color: #de181b;
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+    box-sizing: border-box;
+    /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+    -webkit-tap-highlight-color: transparent;
+    /* 去掉所有标签内边框 */
+    outline: 0;
+}
+
+// 每个页面都要屏幕适配 都要参照100px 参照点  都需要使用vw适配屏幕
+html {
+    // 使用rem配合根元素实现屏幕适配 上下 高度虽然是固定但是也要变化  根据屏幕变化来变化
+    // font-size: 100px;
+    // font-size: 100 / 375 * 100 vw;
+    // 100 / 3.75 ( 3.75 1vw大小)
+    font-size: 26.66667vw;
+}
+
+// 判断了屏幕宽度小于320px以下固定为85.333333px
+// 当屏幕宽度小于320px 固定为320px
+// @media (max-width:320px) {
+//     html {
+//         font-size: 85.33333px;
+//         min-width: 320px;
+//     }
+// }
+
+
+body {
+    // 给body默认为14px 现在全部变成rem body变成rem
+    font-size: .14rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+
+.clearfix::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+// 封装一些边框类名 谁要边框就给谁加
+.bt {
+    border-top: 1px solid #ccc;
+}
+
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+
+.bl {
+    border-left: 1px solid #ccc;
+}
+
+.br {
+    border-right: 1px solid #ccc;
+}

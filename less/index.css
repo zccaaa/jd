@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+  box-sizing: border-box;
+  /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有标签内边框 */
+  outline: 0;
+}
+html {
+  font-size: 26.66667vw;
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 85.33333px;
+  }
+}
+body {
+  font-size: .14rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+.clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+/* 头部容器 */
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  z-index: 999;
+}
+#header .left {
+  width: 0.8rem;
+  height: 0.4rem;
+  /* 利用伸缩布局给left设置让他里面的子元素弹性布局居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .left .icon-logo {
+  /* display: block; */
+  width: 0.6rem;
+  height: 0.23rem;
+  /* 使用背景图也要缩小1半  */
+  /* 默认400*400  把整个原图缩小*/
+  /* 背景图定位要缩小1半 220/2 110px */
+  background: url(../images/sprites.png) -0px -1.1rem / 2rem 2rem ;
+}
+#header .center {
+  flex: 1;
+}
+#header .center form {
+  padding: 0.05rem 0;
+  position: relative;
+}
+#header .center form .icon-search {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.05rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  /* 使用背景图也要缩小1半  */
+  /* 默认400*400  把整个原图缩小*/
+  /* 背景图定位要缩小1半 水平116/2 58px  220/2 110px */
+  /* 把代码包在一个字符串里面 前面跟一个~波浪号 把字符串编译了之后去掉 */
+  background: url(../images/sprites.png) -0.58rem -1.1rem / 2rem 2rem ;
+}
+#header .center form input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  padding-left: 0.3rem;
+  font-size: .14rem;
+}
+#header .right {
+  width: 0.5rem;
+  height: 0.4rem;
+}
+#header .right a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  line-height: 0.4rem;
+  text-decoration: none;
+}
+/* 轮播图区域 */
+#slide {
+  /* 如果需要修改轮播图样式例如小圆点样式 手动检查元素找到对应的类名 覆盖 */
+}
+#slide img {
+  width: 100%;
+}
+#slide .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+/* 导航区域的样式 */
+#nav {
+  padding: 0.1rem 0;
+}
+#nav ul {
+  /* 让li在一行显示 */
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25%;
+}
+#nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#nav ul li a img {
+  width: 0.4rem;
+}
+#nav ul li a p {
+  margin: 0.05rem 0;
+}
+/* 主体商品区域的样式 */
+#main {
+  background-color: #eee;
+  padding: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+#main .seckill {
+  background-color: #fff;
+}
+#main .seckill .title {
+  display: flex;
+  justify-content: space-between;
+  height: 0.4rem;
+  align-items: center;
+}
+#main .seckill .title .left {
+  display: flex;
+}
+#main .seckill .title .left img {
+  width: 0.2rem;
+  height: 0.25rem;
+  margin-left: 0.05rem;
+}
+#main .seckill .title .left > span {
+  margin-left: 0.05rem;
+  color: #de181b;
+}
+#main .seckill .title .left .downtime {
+  margin-left: 0.05rem;
+}
+#main .seckill .title .left .downtime span {
+  width: 0.15rem;
+  height: 0.15rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 0.15rem;
+  background-color: #000;
+  color: #fff;
+}
+#main .seckill .content ul {
+  display: flex;
+}
+#main .seckill .content ul li {
+  flex: 1;
+}
+#main .seckill .content ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .seckill .content ul li a img {
+  width: 1.1rem;
+}
+#main .seckill .content ul li a span {
+  color: #de181b;
+  font-size: 0.12rem;
+}
+#main .seckill .content ul li a del {
+  font-size: 0.12rem;
+  color: #ccc;
+}
+#main .seckill .content ul li ~ li {
+  border-left: 0.01rem solid #ccc;
+}
+#main .market {
+  background-color: #fff;
+  margin-top: 0.1rem;
+}
+#main .market .title {
+  border-bottom: 0.01rem solid #ccc;
+}
+#main .market .title h4 {
+  padding-left: 0.3rem;
+  line-height: 0.4rem;
+  font-weight: normal;
+  position: relative;
+}
+#main .market .title h4::before {
+  content: '';
+  width: 0.04rem;
+  height: 0.16rem;
+  position: absolute;
+  background-color: #de181b;
+  left: 0.2rem;
+  top: 0.12rem;
+}
+#main .market .content {
+  display: flex;
+}
+#main .market .content .left {
+  flex: 1;
+}
+#main .market .content .left a {
+  display: block;
+}
+#main .market .content .left a img {
+  width: 100%;
+}
+#main .market .content .right {
+  flex: 1;
+}
+#main .market .content .right a {
+  display: block;
+}
+#main .market .content .right a img {
+  width: 100%;
+}
+/* 底部区域的样式 */
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  display: block;
+  text-align: center;
+}
+#footer ul li a img {
+  width: 0.65rem;
+  height: 0.5rem;
+}

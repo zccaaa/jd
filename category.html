@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 添加视口 -->
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类页面</title>
+    <!-- 1. 引包 swiper.css-->
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.css">
+    <link rel="stylesheet" href="./less/category.css">
+</head>
+
+<body>
+    <!-- 上 中 下布局 中间是会滚动 左右2边分开滚动（不是滚动 类似轮播图那样的滚动）  
+        上固定高度
+        中自适应高度
+        下也固定高度 -->
+    <header id="header">
+        <div class="left">
+            <a href="#" class="icon-back"></a>
+        </div>
+        <div class="center">
+            <form action="#">
+                <i class="icon-search"></i>
+                <input type="search" placeholder="请输入要搜索的商品">
+            </form>
+        </div>
+        <div class="right">
+            <a href="#" class="icon-menu"></a>
+        </div>
+    </header>
+    <!-- 主体商品 -->
+    <main id="main">
+        <!-- 左侧分类 -->
+        <div class="category-left">
+            <!-- 2. 写结构 让ul放到swiper内容滚动的盒子swiper-slide里面  -->
+            <!-- Swiper大容器 -->
+            <div class="swiper-container">
+                <!-- 所有图片容器 -->
+                <div class="swiper-wrapper">
+                    <!-- 每个图片（是滚动的内容） -->
+                    <div class="swiper-slide">
+                        <ul>
+                            <li class="active" data-index="0"><a href="javascript:void(0);">热门推荐</a></li>
+                            <li data-index="1"><a href="javascript:void(0);">手机数码</a></li>
+                            <li data-index="2"><a href="javascript:void(0);">家用电器</a></li>
+                            <li data-index="3"><a href="javascript:void(0);">电脑办公</a></li>
+                            <li data-index="4"><a href="javascript:void(0);">计生情趣</a></li>
+                            <li data-index="5"><a href="javascript:void(0);">美妆护肤</a></li>
+                            <li data-index="6"><a href="javascript:void(0);">个护清洁</a></li>
+                            <li data-index="7"><a href="javascript:void(0);">汽车用品</a></li>
+                            <li data-index="8"><a href="javascript:void(0);">京东超市</a></li>
+                            <li data-index="9"><a href="javascript:void(0);">男装</a></li>
+                            <li data-index="10"><a href="javascript:void(0);">男鞋</a></li>
+                            <li data-index="11"><a href="javascript:void(0);">女装</a></li>
+                            <li data-index="12"><a href="javascript:void(0);">女鞋</a></li>
+                            <li data-index="13"><a href="javascript:void(0);">母婴童装</a></li>
+                            <li data-index="14"><a href="javascript:void(0);">运动户外</a></li>
+                            <li data-index="15"><a href="javascript:void(0);">内衣配饰</a></li>
+                            <li data-index="16"><a href="javascript:void(0);">食品生鲜</a></li>
+                            <li data-index="17"><a href="javascript:void(0);">酒水饮料</a></li>
+                            <li data-index="18"><a href="javascript:void(0);">家具家装</a></li>
+                            <li data-index="19"><a href="javascript:void(0);">家居厨具</a></li>
+                            <li data-index="20"><a href="javascript:void(0);">箱包手袋</a></li>
+                            <li data-index="21"><a href="javascript:void(0);">钟表珠宝</a></li>
+                            <li data-index="22"><a href="javascript:void(0);">图书音像</a></li>
+                            <li data-index="23"><a href="javascript:void(0);">玩具乐器</a></li>
+                            <li data-index="24"><a href="javascript:void(0);">医药保健</a></li>
+                            <li data-index="25"><a href="javascript:void(0);">宠物生活</a></li>
+                            <li data-index="26"><a href="javascript:void(0);">礼品鲜花</a></li>
+                            <li data-index="27"><a href="javascript:void(0);">农资绿植</a></li>
+                            <li data-index="28"><a href="javascript:void(0);">生活旅行</a></li>
+                            <li data-index="29"><a href="javascript:void(0);">奢侈品</a></li>
+                            <li data-index="30"><a href="javascript:void(0);">全球购</a></li>
+                            <li data-index="31"><a href="javascript:void(0);">国际名牌</a></li>
+                            <li data-index="32"><a href="javascript:void(0);">艺术邮币</a></li>
+                            <li data-index="33"><a href="javascript:void(0);">二手商品</a></li>
+                            <li data-index="34"><a href="javascript:void(0);">特产馆</a></li>
+                            <li data-index="35"><a href="javascript:void(0);">京东金融</a></li>
+                            <li data-index="36"><a href="javascript:void(0);">拍卖</a></li>
+                            <li data-index="37"><a href="javascript:void(0);">房产</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 模拟滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+
+        </div>
+        <!-- 右侧分类 -->
+        <div class="category-right">
+            <!-- Swiper大容器 -->
+            <div class="swiper-container">
+                <!-- 所有图片容器 -->
+                <div class="swiper-wrapper">
+                    <!-- 每个图片（是滚动的内容） -->
+                    <div class="swiper-slide">
+                        <!-- 广告 -->
+                        <a href="#" class="banner">
+                            <img src="https://img20.360buyimg.com/mcoss/jfs/t1/17970/5/1976/51492/5c189253E07d143ed/5df8a82661807e7f.png"
+                                alt="">
+                        </a>
+                        <!-- 所有品牌列表 -->
+                        <div id="branchList">
+                            <div class="jd-brand cur">
+                                <h4>热门品牌</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65951_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_80"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%B0%8F%E7%B1%B3&amp;PTAG=137886.1.2504&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t13411/188/926813276/3945/a4f47292/5a1692eeN105a64b4.png"
+                                                id="Imglazyload162"><span>小米</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65953_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_81"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%8D%8E%E4%B8%BA&amp;PTAG=137886.1.2506&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t11929/135/2372293765/1396/e103ec31/5a1692e2Nbea6e136.jpg"
+                                                id="Imglazyload163"><span>华为</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65952_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_82"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%8D%A3%E8%80%80&amp;PTAG=137886.1.2505&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t12178/348/911080073/4732/db0ad9c7/5a1692e2N6df7c609.jpg"
+                                                id="Imglazyload164"><span>荣耀</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65950_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_83"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=iPhone&amp;PTAG=137886.1.2503&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t13759/194/897734755/2493/1305d4c4/5a1692ebN8ae73077.jpg"
+                                                id="Imglazyload165"><span>iPhone</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65960_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_84"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=vivo&amp;PTAG=137886.1.2513&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t11014/359/2341377211/2777/1755c29c/5a169244Nff0179e0.png"
+                                                id="Imglazyload166"><span>vivo</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65957_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_85"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=OPPO&amp;PTAG=137886.1.2510&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t13036/273/932026474/2570/a3517c7d/5a169254N4bbbd9fb.png"
+                                                id="Imglazyload167"><span>OPPO</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65955_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_86"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E9%AD%85%E6%97%8F&amp;PTAG=137886.1.2508&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t12820/326/909017718/7138/68cde747/5a169243N40eca33c.jpg"
+                                                id="Imglazyload168"><span>魅族</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65956_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_87"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%B8%89%E6%98%9F&amp;PTAG=137886.1.2509&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t11509/131/2348573811/3425/4f20fe6/5a16925aN8a6dfd03.png"
+                                                id="Imglazyload169"><span>三星</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65961_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_88"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%B8%80%E5%8A%A0&amp;PTAG=137886.1.2514&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t11209/71/2351231464/4158/fc0c415c/5a16923fNfc14307e.jpg"
+                                                id="Imglazyload170"><span>一加</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65958_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_89"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=360%E6%89%8B%E6%9C%BA&amp;PTAG=137886.1.2511&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t13096/309/908035611/5138/5558f001/5a16924fNeac7677e.jpg"
+                                                id="Imglazyload171"><span>360手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="68874_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_90"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=锤子手机&amp;PTAG=137886.1.2507&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t19387/332/664528115/8176/5eabe8cb/5a9fa5e0N6754e52a.jpg"
+                                                id="Imglazyload172"><span>锤子手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="68875_1980_65868_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_91"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=努比亚手机&amp;PTAG=137886.1.2512&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t15085/289/2395028996/2546/1e7e1f7b/5a9fa5e7Nc5cc0f6b.jpg"
+                                                id="Imglazyload173"><span>努比亚</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>手机通讯</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65945_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_92"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%80%81%E4%BA%BA%E6%9C%BA&amp;PTAG=137886.1.2520&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t11461/339/2354953633/8254/8c8c50d3/5a169217N5d1b842e.jpg"
+                                                id="Imglazyload174"><span>老人机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65946_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_93"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA&amp;PTAG=137886.1.2521&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t11503/241/2246064496/4783/cea2850e/5a169216N0701c7f1.jpg"
+                                                id="Imglazyload175"><span>手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="69152_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_94"
+                                            href="https://poplist.m.jd.com/fh/list.html?sub=39027&amp;r=1&amp;PTAG=137886.1.2599&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t18955/187/1309277884/11517/fe100782/5ac48d27N3f5bb821.jpg"
+                                                id="Imglazyload176"><span>全面屏手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65941_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_95"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%B8%B8%E6%88%8F%E6%89%8B%E6%9C%BA&amp;PTAG=137886.1.2516&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t11470/45/2362968077/2689/fb36d9a0/5a169238Nc8f0882b.jpg"
+                                                id="Imglazyload177"><span>游戏手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65942_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_96"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%8B%8D%E7%85%A7%E6%89%8B%E6%9C%BA&amp;PTAG=137886.1.2517&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t12022/66/917351804/2257/7ddc58e5/5a169232Ndf76f53c.jpg"
+                                                id="Imglazyload178"><span>拍照手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65947_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_97"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%AF%B9%E8%AE%B2%E6%9C%BA&amp;PTAG=137886.1.2522&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t13255/192/958298391/1687/5c7e3c53/5a169204Nd4aa27bb.jpg"
+                                                id="Imglazyload179"><span>对讲机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65948_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_98"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%BA%AC%E4%B8%9C%E5%9B%9E%E6%94%B6&amp;PTAG=137886.1.2523&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t13246/188/925975876/8794/686dbb9c/5a1691e0N62f626e3.jpg"
+                                                id="Imglazyload180"><span>京东回收</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="68876_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_99"
+                                            href="//poplist.m.jd.com/fh/list.html?sub=36291&amp;r=1&amp;PTAG=137886.1.2528&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t15790/6/2311892256/2742/5ed77924/5a9fa728Nbff29ad2.jpg"
+                                                id="Imglazyload181"><span>女性手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65949_1980_65869_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_100"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%BA%AC%E4%B8%9C%E7%BB%B4%E4%BF%AE&amp;PTAG=137886.1.2524&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t11644/236/2358207967/6141/e2d71825/5a169205N84a49a6a.jpg"
+                                                id="Imglazyload182"><span>京东维修</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <!-- 每个品牌 -->
+                            <div class="jd-brand">
+                                <h4>热门分类</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65103_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_44"
+                                            href="https://so.m.jd.com/products/9987-653-655.html?PTAG=137886.1.61&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t27136/183/1628977274/31007/a6f7ed55/5be6ebd8Nb07ef492.png"
+                                                id="Imglazyload62"><span>手机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="72717_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_45"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=华为&amp;PTAG=137886.1.74&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t1/1446/14/631/8500/5b9237e5E0d1f9e16/b1a627b92323b5ed.png"
+                                                id="Imglazyload63"><span>华为</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73360_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_46"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=电磁炉&amp;PTAG=137886.1.69&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t28390/329/576939433/22816/28929acf/5bf7af67N2a275d6a.png"
+                                                id="Imglazyload64"><span>电磁炉</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73362_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_47"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=电热毯&amp;PTAG=137886.1.75&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t29599/234/579251680/28438/c901f95e/5bf7b1c2Ne8b1eb0f.png"
+                                                id="Imglazyload65"><span>电热毯</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="68005_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_48"
+                                            href="https://so.m.jd.com/products/670-699-700.html?PTAG=137886.1.71&amp;projectId=1715&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t27400/283/1600620667/15106/a935e7bd/5be6f2e1Nfa8d9d6e.png"
+                                                id="Imglazyload66"><span>路由器</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73364_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_49"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=避孕套&amp;PTAG=137886.1.65&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t27343/6/2085247837/31220/3cc6d03a/5bf7b1c9N816d1180.png"
+                                                id="Imglazyload67"><span>避孕套</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73681_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_50"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=内裤男&amp;PTAG=137886.1.70&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t1/18035/6/2437/25245/5c1cab69E1ae93a61/9e1a8a23f26730a8.jpg"
+                                                id="Imglazyload68"><span>男士内裤</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73682_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_51"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=牛奶&amp;PTAG=137886.1.67&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t1/18551/37/2465/38009/5c1cab61E6f486863/21485d3158ab8a4f.jpg"
+                                                id="Imglazyload69"><span>牛奶</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73683_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_52"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=吹风机&amp;PTAG=137886.1.73&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t1/25144/37/2370/7617/5c1cae45Ea0ec5a85/f7ba433b5d1e072f.png"
+                                                id="Imglazyload70"><span>吹风机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73684_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_53"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=暖宝宝&amp;PTAG=137886.1.62&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t1/29449/14/2426/40670/5c1cae51Eff0128ae/836386bd16068694.png"
+                                                id="Imglazyload71"><span>暖宝宝</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73685_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_54"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=vivo&amp;PTAG=137886.1.64&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t1/22021/36/2449/23465/5c1cae3eE9d3c994e/2dcd61d27903c679.png"
+                                                id="Imglazyload72"><span>vivo</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73004_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_55"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=袜子&amp;PTAG=137886.1.63&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t1/2218/31/12406/9370/5bd2e748E843c7885/a143d0c4244bb145.png"
+                                                id="Imglazyload73"><span>袜子</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73686_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_56"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=羽绒服&amp;PTAG=137886.1.65&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t1/19249/4/2438/21895/5c1cae4bE2daf2ac6/8878262170958f72.png"
+                                                id="Imglazyload74"><span>羽绒服</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73687_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_57"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=小米&amp;PTAG=137886.1.68&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t1/12250/23/2390/26147/5c1cabe9Eee9eef09/32a79a0c7547997a.png"
+                                                id="Imglazyload75"><span>小米</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="73359_2006_64754_home"
+                                            report-eventid="MFilter_PopularThird" report-eventlevel="2" id="branch_58"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=加湿器&amp;PTAG=137886.1.66&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t27556/69/2092685225/14211/7250ea85/5bf7af60Nd4e326e1.png"
+                                                id="Imglazyload76"><span>加湿器</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                                <ul class="jd-category-style-1">
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t22444/92/965398566/5352/2eac5e79/5b487f2eN6c35068e.jpg"
+                                                id="Imglazyload74"><span>空调扇</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20488/4/2136681163/24726/415ebfae/5b487fa3Nf5ff458c.png"
+                                                id="Imglazyload75"><span>鱼竿</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t21655/83/2186874549/15932/c273d29b/5b48802aN13fe73de.png"
+                                                id="Imglazyload76"><span>剃须刀</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24349/253/931832357/8172/6838e266/5b48801aN8e64757f.jpg"
+                                                id="Imglazyload77"><span>男鞋</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24100/320/927901901/17896/10c549f7/5b487d86Ndb7b3948.png"
+                                                id="Imglazyload78"><span>微波炉</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20074/108/2532487597/5940/4d67101d/5b48892dNcbde57bd.jpg"
+                                                id="Imglazyload79"><span>瑜伽垫</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img20.360buyimg.com/focus/s140x140_jfs/t22300/73/231945461/4142/40db87e3/5b055011Nb89b2bda.png"
+                                                id="Imglazyload80"><span>充电宝</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 每个品牌 -->
+                            <div class="jd-brand">
+                                <h4>热门分类</h4>
+                                <ul class="jd-category-style-1">
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t22444/92/965398566/5352/2eac5e79/5b487f2eN6c35068e.jpg"
+                                                id="Imglazyload74"><span>空调扇</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20488/4/2136681163/24726/415ebfae/5b487fa3Nf5ff458c.png"
+                                                id="Imglazyload75"><span>鱼竿</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t21655/83/2186874549/15932/c273d29b/5b48802aN13fe73de.png"
+                                                id="Imglazyload76"><span>剃须刀</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24349/253/931832357/8172/6838e266/5b48801aN8e64757f.jpg"
+                                                id="Imglazyload77"><span>男鞋</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24100/320/927901901/17896/10c549f7/5b487d86Ndb7b3948.png"
+                                                id="Imglazyload78"><span>微波炉</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20074/108/2532487597/5940/4d67101d/5b48892dNcbde57bd.jpg"
+                                                id="Imglazyload79"><span>瑜伽垫</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img20.360buyimg.com/focus/s140x140_jfs/t22300/73/231945461/4142/40db87e3/5b055011Nb89b2bda.png"
+                                                id="Imglazyload80"><span>充电宝</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 每个品牌 -->
+                            <div class="jd-brand">
+                                <h4>热门分类</h4>
+                                <ul class="jd-category-style-1">
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t22444/92/965398566/5352/2eac5e79/5b487f2eN6c35068e.jpg"
+                                                id="Imglazyload74"><span>空调扇</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20488/4/2136681163/24726/415ebfae/5b487fa3Nf5ff458c.png"
+                                                id="Imglazyload75"><span>鱼竿</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t21655/83/2186874549/15932/c273d29b/5b48802aN13fe73de.png"
+                                                id="Imglazyload76"><span>剃须刀</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24349/253/931832357/8172/6838e266/5b48801aN8e64757f.jpg"
+                                                id="Imglazyload77"><span>男鞋</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24100/320/927901901/17896/10c549f7/5b487d86Ndb7b3948.png"
+                                                id="Imglazyload78"><span>微波炉</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20074/108/2532487597/5940/4d67101d/5b48892dNcbde57bd.jpg"
+                                                id="Imglazyload79"><span>瑜伽垫</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img20.360buyimg.com/focus/s140x140_jfs/t22300/73/231945461/4142/40db87e3/5b055011Nb89b2bda.png"
+                                                id="Imglazyload80"><span>充电宝</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 每个品牌 -->
+                            <div class="jd-brand">
+                                <h4>热门分类</h4>
+                                <ul class="jd-category-style-1">
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t22444/92/965398566/5352/2eac5e79/5b487f2eN6c35068e.jpg"
+                                                id="Imglazyload74"><span>空调扇</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20488/4/2136681163/24726/415ebfae/5b487fa3Nf5ff458c.png"
+                                                id="Imglazyload75"><span>鱼竿</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t21655/83/2186874549/15932/c273d29b/5b48802aN13fe73de.png"
+                                                id="Imglazyload76"><span>剃须刀</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24349/253/931832357/8172/6838e266/5b48801aN8e64757f.jpg"
+                                                id="Imglazyload77"><span>男鞋</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24100/320/927901901/17896/10c549f7/5b487d86Ndb7b3948.png"
+                                                id="Imglazyload78"><span>微波炉</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20074/108/2532487597/5940/4d67101d/5b48892dNcbde57bd.jpg"
+                                                id="Imglazyload79"><span>瑜伽垫</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img20.360buyimg.com/focus/s140x140_jfs/t22300/73/231945461/4142/40db87e3/5b055011Nb89b2bda.png"
+                                                id="Imglazyload80"><span>充电宝</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 每个品牌 -->
+                            <div class="jd-brand">
+                                <h4>热门分类</h4>
+                                <ul class="jd-category-style-1">
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t22444/92/965398566/5352/2eac5e79/5b487f2eN6c35068e.jpg"
+                                                id="Imglazyload74"><span>空调扇</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20488/4/2136681163/24726/415ebfae/5b487fa3Nf5ff458c.png"
+                                                id="Imglazyload75"><span>鱼竿</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img30.360buyimg.com/focus/s140x140_jfs/t21655/83/2186874549/15932/c273d29b/5b48802aN13fe73de.png"
+                                                id="Imglazyload76"><span>剃须刀</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24349/253/931832357/8172/6838e266/5b48801aN8e64757f.jpg"
+                                                id="Imglazyload77"><span>男鞋</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img14.360buyimg.com/focus/s140x140_jfs/t24100/320/927901901/17896/10c549f7/5b487d86Ndb7b3948.png"
+                                                id="Imglazyload78"><span>微波炉</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img13.360buyimg.com/focus/s140x140_jfs/t20074/108/2532487597/5940/4d67101d/5b48892dNcbde57bd.jpg"
+                                                id="Imglazyload79"><span>瑜伽垫</span></a>
+                                    </li>
+                                    <li>
+                                        <a><img src="http://img20.360buyimg.com/focus/s140x140_jfs/t22300/73/231945461/4142/40db87e3/5b055011Nb89b2bda.png"
+                                                id="Imglazyload80"><span>充电宝</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                    <li>
+                                        <a class="J_ping"><img
+                                                src="http://img20.360buyimg.com/focus/s140x140_jfs/t20128/208/216721929/9242/472993da/5b05522dNa2aae1bb.png"
+                                                id="Imglazyload81"><span>耳机</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>运营商</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65938_1980_65870_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_101"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%90%88%E7%BA%A6%E6%9C%BA&amp;PTAG=137886.1.2526&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t13309/121/902275259/3700/e9f22529/5a168e83Nb1a35aac.png"
+                                                id="Imglazyload183"><span>合约机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65939_1980_65870_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_102"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E5%8D%A1&amp;PTAG=137886.1.2527&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t11515/106/2342900928/7913/5a606e3f/5a168e7eNdd5d0121.png"
+                                                id="Imglazyload184"><span>选号卡</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65940_1980_65870_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_103"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%8A%9E%E5%A5%97%E9%A4%90&amp;PTAG=137886.1.2596&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t14146/201/916948302/5272/8ae80f8e/5a168e78N78b24a8e.jpg"
+                                                id="Imglazyload185"><span>办套餐</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="68877_1980_65870_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_104"
+                                            href="//h5.m.jd.com/active/2g6zWZQ7dwTGDRsMg19BdN1U5T5o/index.html?PTAG=137886.1.2597&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t15865/151/2284016087/10155/c4aaceec/5a9faa1fN03a4c9e1.jpg"
+                                                id="Imglazyload186"><span>京东网厅</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>手机配件</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65929_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_105"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%95%B0%E6%8D%AE%E7%BA%BF&amp;PTAG=137886.1.2536&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t18055/312/1342501458/9462/4699ed8a/5ac48672N11cf61fe.jpg"
+                                                id="Imglazyload187"><span>数据线</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65930_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_106"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E5%82%A8%E5%AD%98%E5%8D%A1&amp;PTAG=137886.1.2537&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t13657/281/912225045/5343/3109ae02/5a167b73Na69aae95.jpg"
+                                                id="Imglazyload188"><span>手机储存卡</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="69148_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_107"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=充电宝&amp;PTAG=137886.1.2531&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t19537/23/1276961949/9676/f4b5be0d/5ac48791Nb224f939.jpg"
+                                                id="Imglazyload189"><span>充电宝</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65928_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_108"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E8%B4%B4%E8%86%9C&amp;PTAG=137886.1.2535&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t17548/288/1331085893/6458/52545456/5ac486c6N0c8a93dc.jpg"
+                                                id="Imglazyload190"><span>手机贴膜</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65926_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_109"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E8%80%B3%E6%9C%BA&amp;PTAG=137886.1.2533&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t17284/353/1280266808/3696/32c00915/5ac486ccN2d8031c1.jpg"
+                                                id="Imglazyload191"><span>手机耳机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65923_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_110"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%93%9D%E7%89%99%E8%80%B3%E6%9C%BA&amp;PTAG=137886.1.2530&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t18091/128/1346418266/3819/9dc8206c/5ac486d1Ncae5823b.jpg"
+                                                id="Imglazyload192"><span>蓝牙耳机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65937_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_111"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E6%94%AF%E6%9E%B6&amp;PTAG=137886.1.2544&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t19144/51/1301628112/4640/fbf9dfb6/5ac486d7N3afa8a3e.jpg"
+                                                id="Imglazyload193"><span>手机支架</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65935_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_112"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E9%A5%B0%E5%93%81&amp;PTAG=137886.1.2542&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t19357/275/1266747041/8012/244ec91b/5ac486deN24e397cb.jpg"
+                                                id="Imglazyload194"><span>手机饰品</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65933_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_113"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%BD%A6%E8%BD%BD%E9%85%8D%E4%BB%B6&amp;PTAG=137886.1.2540&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t18796/230/1350793435/3980/3f19a427/5ac48749Nf95f399e.jpg"
+                                                id="Imglazyload195"><span>车载配件</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65927_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_114"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%85%85%E7%94%B5%E5%99%A8&amp;PTAG=137886.1.2534&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t16774/124/1318736793/3884/cb658723/5ac4874fN6bc007b0.jpg"
+                                                id="Imglazyload196"><span>充电器</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65931_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_115"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E7%94%B5%E6%B1%A0&amp;PTAG=137886.1.2538&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t18340/309/1327570911/1624/d7fd938c/5ac48770N435b114d.jpg"
+                                                id="Imglazyload197"><span>手机电池</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65934_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_116"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%95%B0%E7%A0%81%E9%85%8D%E4%BB%B6&amp;PTAG=137886.1.2541&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t19015/148/1326835130/7790/ddc201c3/5ac48776N9bf8b7c7.jpg"
+                                                id="Imglazyload198"><span>创意配件</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65936_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_117"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%89%8B%E6%9C%BA%E6%8B%8D%E7%85%A7%E9%85%8D%E4%BB%B6&amp;PTAG=137886.1.2543&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t19723/252/1293815631/3782/83b375cb/5ac4877eNa263158a.jpg"
+                                                id="Imglazyload199"><span>拍照配件</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65925_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_118"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%8B%B9%E6%9E%9C%E5%91%A8%E8%BE%B9&amp;PTAG=137886.1.2532&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t18556/113/1299885588/4128/81ee8564/5ac48786N17d8442a.jpg"
+                                                id="Imglazyload200"><span>苹果周边</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="69147_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_119"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=手机壳%2F保护套&amp;PTAG=137886.1.2539&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t18502/160/1284774717/9251/feb8a496/5ac4878cN658cbb07.jpg"
+                                                id="Imglazyload201"><span>手机壳/保护套</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="69149_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_120"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=无线充电器&amp;PTAG=137886.1.2695&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t16900/223/1311985391/8536/fe80852/5ac48798N728a2978.jpg"
+                                                id="Imglazyload202"><span>无线充电器</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="69150_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_121"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=背夹充电宝&amp;PTAG=137886.1.2696&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t19639/262/1323952910/4345/a8b8bc27/5ac4879eN1e7b1ce9.jpg"
+                                                id="Imglazyload203"><span>背夹充电宝</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="69151_1980_65871_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_122"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=手机转接&amp;PTAG=137886.1.2697&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t16627/197/1308314139/2592/1e40bf4e/5ac487a4Nc21fb4d0.jpg"
+                                                id="Imglazyload204"><span>手机转接</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>摄影摄像</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65913_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_123"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%8D%95%E5%8F%8D&amp;PTAG=137886.1.2546&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t13765/295/926307178/7966/3228af24/5a1679f2Nc2f659b6.jpg"
+                                                id="Imglazyload205"><span>单反相机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65916_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_124"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%95%B0%E7%A0%81%E7%9B%B8%E6%9C%BA&amp;PTAG=137886.1.2549&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t12814/251/897168610/8107/60a873f/5a1679caNada7f827.jpg"
+                                                id="Imglazyload206"><span>数码相机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65915_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_125"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%8B%8D%E7%AB%8B%E5%BE%97&amp;PTAG=137886.1.2548&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t12103/88/911420740/3644/5d80c2d9/5a1679e9Nc3e2dd28.jpg"
+                                                id="Imglazyload207"><span>拍立得</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65920_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_126"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%88%B7%E5%A4%96%E6%91%84%E5%BD%B1&amp;PTAG=137886.1.2553&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t12586/176/939117172/2550/d16b4b6c/5a1679c3N67e2b3f1.jpg"
+                                                id="Imglazyload208"><span>户外器材</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65914_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_127"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%BE%AE%E5%8D%95&amp;PTAG=137886.1.2547&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t12364/268/939218267/3342/780120ca/5a1679f1N577ba68b.jpg"
+                                                id="Imglazyload209"><span>单电/微单相机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65917_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_128"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%91%84%E5%83%8F%E6%9C%BA&amp;PTAG=137886.1.2550&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t12859/213/903907037/4465/aad95a43/5a1679daNbea69778.jpg"
+                                                id="Imglazyload210"><span>摄像机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65918_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_129"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%BF%90%E5%8A%A8%E7%9B%B8%E6%9C%BA&amp;PTAG=137886.1.2551&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t13471/257/894155873/9479/7f38d7e/5a1679d5Nfdcfe9bb.jpg"
+                                                id="Imglazyload211"><span>运动相机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65919_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_130"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E9%95%9C%E5%A4%B4&amp;PTAG=137886.1.2552&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t12154/164/880046972/2880/86b45b51/5a1679b9N42a5f8e5.jpg"
+                                                id="Imglazyload212"><span>镜头</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65922_1980_65872_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_131"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%86%B2%E5%8D%B0%E6%9C%8D%E5%8A%A1&amp;PTAG=137886.1.2555&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t11101/333/2250404943/7079/da2367be/5a1679baNaffaf88c.png"
+                                                id="Imglazyload213"><span>冲印服务</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>影音娱乐</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65909_1980_65873_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_132"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%97%A0%E7%BA%BF%E9%9F%B3%E7%AE%B1&amp;PTAG=137886.1.2560&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t12931/44/891657494/2295/7609fca6/5a167864Ne52020f2.jpg"
+                                                id="Imglazyload214"><span>便携/无线音箱</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65907_1980_65873_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_133"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E9%9F%B3%E7%AE%B1%2F%E9%9F%B3%E5%93%8D&amp;PTAG=137886.1.2558&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t11518/28/2381795148/3559/268392b0/5a167859N01d8198b.jpg"
+                                                id="Imglazyload215"><span>音箱/音响</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65908_1980_65873_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_134"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=MP3%2FMP4&amp;PTAG=137886.1.2559&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t12478/108/888997336/8147/a11bd237/5a16782fN5899ee5e.jpg"
+                                                id="Imglazyload216"><span>MP3/MP4</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65906_1980_65873_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_135"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%80%B3%E6%9C%BA%2F%E8%80%B3%E9%BA%A6&amp;PTAG=137886.1.2557&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t13510/13/889605109/2757/5594d57f/5a167866N8c853168.jpg"
+                                                id="Imglazyload217"><span>耳机/耳麦</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65911_1980_65873_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_136"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E9%BA%A6%E5%85%8B%E9%A3%8E&amp;PTAG=137886.1.2562&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t13153/363/907758425/1791/3138302d/5a167834N97e065bb.jpg"
+                                                id="Imglazyload218"><span>麦克风</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65912_1980_65873_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_137"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%B8%93%E4%B8%9A%E9%9F%B3%E9%A2%91&amp;PTAG=137886.1.2563&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t13600/224/883450494/2256/801f9c0b/5a16782eN9012c0c4.jpg"
+                                                id="Imglazyload219"><span>专业音频</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>数码配件</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65895_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_138"
+                                            href="https://so.m.jd.com/products/652-829-845.html?PTAG=137886.1.2565&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t11806/47/2248616132/4516/e4aec88e/5a1676e9N1ba70a81.jpg"
+                                                id="Imglazyload220"><span>存储卡</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65900_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_139"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%B8%89%E8%84%9A%E6%9E%B6&amp;PTAG=137886.1.2570&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t11122/182/2222069305/1713/af6c4ea3/5a1676d7N70b9300c.jpg"
+                                                id="Imglazyload221"><span>三脚架/云台</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65905_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_140"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%95%B0%E7%A0%81%E6%94%AF%E6%9E%B6&amp;PTAG=137886.1.2575&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t13960/1/896234990/3495/ba79dcd5/5a16769aNc48193e6.jpg"
+                                                id="Imglazyload222"><span>数码支架</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65896_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_141"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E8%AF%BB%E5%8D%A1%E5%99%A8&amp;PTAG=137886.1.2566&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t12013/240/926457268/3399/b9ae87a7/5a1676f9N0198258e.jpg"
+                                                id="Imglazyload223"><span>读卡器</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65897_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_142"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%BB%A4%E9%95%9C&amp;PTAG=137886.1.2567&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t14059/125/899971136/3385/dae73e41/5a1676efN42553f76.jpg"
+                                                id="Imglazyload224"><span>滤镜</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65901_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_143"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E7%9B%B8%E6%9C%BA%E6%B8%85%E6%B4%81&amp;PTAG=137886.1.2571&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t12184/276/902476544/2247/395ad640/5a1676d4Nb81ebdcb.jpg"
+                                                id="Imglazyload225"><span>相机清洁/贴膜</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65899_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_144"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E7%9B%B8%E6%9C%BA%E5%8C%85&amp;PTAG=137886.1.2569&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t13498/111/906841326/10806/3e913761/5a1676e6Na93e4fd1.jpg"
+                                                id="Imglazyload226"><span>相机包</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65898_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_145"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E9%97%AA%E5%85%89%E7%81%AF&amp;PTAG=137886.1.2568&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t12871/119/940831255/3989/70c3fd57/5a1676ecNfdacde72.jpg"
+                                                id="Imglazyload227"><span>闪光灯/手柄</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65904_1980_65874_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_146"
+                                            href="https://so.m.jd.com/products/652-829-854.html?PTAG=137886.1.2574&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t12079/282/904418347/5828/f42b5c8e/5a16767bNe089435f.jpg"
+                                                id="Imglazyload228"><span>电池/充电器</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>智能设备</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65884_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_147"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%99%BA%E8%83%BD%E6%89%8B%E7%8E%AF&amp;PTAG=137886.1.2577&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t11977/66/2331987943/5747/c47a800b/5a1674a2Nf5dc75c6.jpg"
+                                                id="Imglazyload229"><span>智能手环</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65885_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_148"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%99%BA%E8%83%BD%E6%89%8B%E8%A1%A8&amp;PTAG=137886.1.2578&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t11800/163/2392976653/6565/a9dc4c3b/5a16749eN34794086.jpg"
+                                                id="Imglazyload230"><span>智能手表</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65887_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_149"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85&amp;PTAG=137886.1.2580&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t13318/328/886534248/4667/81c8906/5a167490N092a2af2.jpg"
+                                                id="Imglazyload231"><span>智能家居</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65893_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_150"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BA&amp;PTAG=137886.1.2586&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t13288/240/895737412/4317/a36e4d05/5a16745dNa1c329c2.jpg"
+                                                id="Imglazyload232"><span>智能机器人</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65888_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_151"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E4%BD%93%E6%84%9F%E8%BD%A6&amp;PTAG=137886.1.2581&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t11944/353/2328891001/2068/a66878bd/5a16747aNeecc001b.jpg"
+                                                id="Imglazyload233"><span>体感车</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65894_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_152"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%97%A0%E4%BA%BA%E6%9C%BA&amp;PTAG=137886.1.2587&amp;searchFrom=category"><img
+                                                src="https://img30.360buyimg.com/focus/s140x140_jfs/t13885/191/891735699/5160/da2bded2/5a16745aN29dedc36.jpg"
+                                                id="Imglazyload234"><span>无人机</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65892_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_153"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%99%BA%E8%83%BD%E9%85%8D%E4%BB%B6&amp;PTAG=137886.1.2585&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t12355/67/924284298/2140/cbf52719/5a167464Nb18dbd59.jpg"
+                                                id="Imglazyload235"><span>其他配件</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65889_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_154"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=VR%E7%9C%BC%E9%95%9C&amp;PTAG=137886.1.2582&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t13930/266/903222742/3308/8b774f1b/5a167484N0a623a5b.jpg"
+                                                id="Imglazyload236"><span>VR眼镜</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65891_1980_65875_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_155"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%99%BA%E8%83%BD%E9%85%8D%E9%A5%B0&amp;PTAG=137886.1.2584&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t13330/284/897613796/1872/cac5ade4/5a167467Ndd23929b.jpg"
+                                                id="Imglazyload237"><span>智能配饰</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                            <div class="jd-brand cur">
+                                <h4>电子教育</h4>
+                                <ul class="jd-category-style-1">
+                                    <li><a class="J_ping" report-eventparam="65882_1980_65876_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_156"
+                                            href="https://so.m.jd.com/products/652-12346-12358.html?PTAG=137886.1.2594&amp;searchFrom=category"><img
+                                                src="https://img12.360buyimg.com/focus/s140x140_jfs/t11494/97/2366433924/3228/c6827521/5a167302N7103e54c.jpg"
+                                                id="Imglazyload238"><span>学生平板</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65878_1980_65876_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_157"
+                                            href="https://so.m.jd.com/products/652-12346-1203.html?PTAG=137886.1.2590&amp;searchFrom=category"><img
+                                                src="https://img10.360buyimg.com/focus/s140x140_jfs/t11977/187/2336671981/2658/10749ff6/5a167317Nde2f9a4b.jpg"
+                                                id="Imglazyload239"><span>电纸书</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65879_1980_65876_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_158"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%BD%95%E9%9F%B3%E7%AC%94&amp;PTAG=137886.1.2591&amp;searchFrom=category"><img
+                                                src="https://img11.360buyimg.com/focus/s140x140_jfs/t13000/167/859650860/3237/a72abbe8/5a167312N33ea5808.jpg"
+                                                id="Imglazyload240"><span>录音笔</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65883_1980_65876_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_159"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E6%97%A9%E6%95%99%E7%9B%8A%E6%99%BA&amp;PTAG=137886.1.2595&amp;searchFrom=category"><img
+                                                src="https://img20.360buyimg.com/focus/s140x140_jfs/t13891/46/885209933/6676/d54b44d8/5a1672fbN487f682b.jpg"
+                                                id="Imglazyload241"><span>早教益智</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65881_1980_65876_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_160"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E7%82%B9%E8%AF%BB%E6%9C%BA&amp;PTAG=137886.1.2593&amp;searchFrom=category"><img
+                                                src="https://img13.360buyimg.com/focus/s140x140_jfs/t13432/76/902190959/2632/6175273e/5a167308Ne65f7b7c.jpg"
+                                                id="Imglazyload242"><span>点读机/笔</span></a></li>
+                                    <li><a class="J_ping" report-eventparam="65880_1980_65876_home"
+                                            report-eventid="MCategory_3rd" report-eventlevel="2" id="branch_161"
+                                            href="https://so.m.jd.com/ware/search.action?keyword=%E5%A4%8D%E8%AF%BB%E6%9C%BA&amp;PTAG=137886.1.2592&amp;searchFrom=category"><img
+                                                src="https://img14.360buyimg.com/focus/s140x140_jfs/t12904/65/910326652/3090/c9fe6001/5a16730dN65cbc05a.jpg"
+                                                id="Imglazyload243"><span>复读机</span></a></li>
+                                    <div style="clear:both"></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 模拟滚动条 -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+        </div>
+    </main>
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <img src="https://m.360buyimg.com/mobilecms/jfs/t15145/137/2502885754/3106/de5e0b14/5aa10cd2N46f18ce6.png"
+                        alt="">
+                </a>
+            </li>
+            <li>
+                <a href="category.html">
+                    <img src="https://m.360buyimg.com/mobilecms/jfs/t19183/49/696491919/3763/dec8cceb/5aa10cdbNa9cd0320.png"
+                        alt="">
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <img src="https://m.360buyimg.com/mobilecms/jfs/t18583/69/717127328/4407/5e47882b/5aa10ceaN649eec12.png"
+                        alt="">
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <img src="https://m.360buyimg.com/mobilecms/jfs/t17782/11/2358895717/4684/ad19de7f/5af43af1N04ef5a16.png"
+                        alt="">
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- 1. 引入swiper的js -->
+    <script src="./lib/swiper/js/swiper.js"></script>
+    <!-- 引入自己是分类的js -->
+    <script src="./js/category.js"></script>
+</body>
+
+</html>

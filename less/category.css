@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 设置移动端所有标签都要设置盒模型防止边框 padding把盒子变大出滚动条（禁止出现横向滚动条的） */
+  box-sizing: border-box;
+  /* 去掉a等标签能够点击的标签的高亮背景色 移动端特殊的（按住才会触发） */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有标签内边框 */
+  outline: 0;
+}
+html {
+  font-size: 26.66667vw;
+}
+body {
+  font-size: .14rem;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+img {
+  vertical-align: middle;
+}
+input {
+  border: 0;
+  outline: 0;
+}
+/* 清除浮动公共类（使用flex布局基本上用不到浮动了 ） */
+.clearfix::before {
+  content: '';
+  display: block;
+  clear: both;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+#header {
+  height: .4rem;
+  background-color: #ccc;
+  display: flex;
+}
+#header .left {
+  width: 0.4rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .left .icon-back {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-image: url(../images/sprites.png);
+  background-size: 2rem 2rem;
+  background-position: -0.2rem 0;
+}
+#header .center {
+  flex: 1;
+}
+#header .center form {
+  padding-top: 0.05rem;
+  position: relative;
+}
+#header .center form .icon-search {
+  position: absolute;
+  top: 0.1rem;
+  left: 0.1rem;
+  width: 0.2rem;
+  height: 0.2rem;
+  background-image: url(../images/sprites.png);
+  background-size: 2rem 2rem;
+  background-position: -0.6rem -1.1rem;
+}
+#header .center form input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  padding-left: 0.3rem;
+  font-size: 0.14rem;
+}
+#header .right {
+  width: 0.4rem;
+  height: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .right .icon-menu {
+  width: 0.2rem;
+  height: 0.2rem;
+  background-image: url(../images/sprites.png);
+  background-size: 2rem 2rem;
+  background-position: -0.6rem 0;
+}
+#main {
+  flex: 1;
+  display: flex;
+}
+#main .category-left {
+  width: .85rem;
+  overflow: hidden;
+}
+#main .category-left .swiper-container {
+  height: 100%;
+}
+#main .category-left .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .category-left ul li a {
+  display: block;
+  width: 100%;
+  height: .46rem;
+  background-color: #eee;
+  text-align: center;
+  line-height: .46rem;
+}
+#main .category-left ul li.active a {
+  background-color: #fff;
+  color: #de181b;
+}
+#main .category-right {
+  flex: 1;
+  overflow: hidden;
+  padding: .07rem;
+}
+#main .category-right .swiper-container {
+  height: 100%;
+}
+#main .category-right .swiper-container .swiper-slide {
+  height: auto;
+}
+#main .category-right .swiper-container .swiper-scrollbar {
+  width: .03rem;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+#main .category-right .swiper-container .swiper-scrollbar .swiper-scrollbar-drag {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+#main .category-right .banner img {
+  width: 100%;
+}
+#main .category-right #branchList .jd-brand h4 {
+  line-height: .4rem;
+}
+#main .category-right #branchList .jd-brand ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#main .category-right #branchList .jd-brand ul li {
+  width: 33.33%;
+}
+#main .category-right #branchList .jd-brand ul li a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main .category-right #branchList .jd-brand ul li a img {
+  width: .7rem;
+}
+#footer {
+  height: 0.5rem;
+  background-color: #ccc;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  display: block;
+  text-align: center;
+}
+#footer ul li a img {
+  width: .65rem;
+}
